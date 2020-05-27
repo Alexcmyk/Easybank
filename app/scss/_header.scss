@@ -23,9 +23,27 @@
             width: 26px;
             height:2px;
             background-color: $mainDark;
+            transform-origin: 3px 1px;
+            transition: all 150ms ease-in-out;
 
             &:not(:last-child) {
-                margin-bottom: 3px;
+                margin-bottom: 5px;
+            }
+        }
+
+        &.open {
+            > span:first-child {
+                transform: rotate(45deg);
+                
+            }
+
+            > span:nth-child(2) {
+                opacity: 0;
+            }
+
+            > span:last-child {
+                transform: rotate(-45deg);
+                
             }
         }
 

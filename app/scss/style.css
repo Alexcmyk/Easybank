@@ -197,6 +197,11 @@ a, a:visited, a:hover {
           align-items: center;
 }
 
+.container {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
 button, .button {
   padding: .875rem 2.1875rem;
   color: #fafafa;
@@ -230,18 +235,18 @@ button:hover, .button:hover {
   background-color: #fff;
 }
 
-.header.open .header__menu > span:first-child {
+.header.open .header__toggle > span:first-child {
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
 }
 
-.header.open .header__menu > span:nth-child(2) {
+.header.open .header__toggle > span:nth-child(2) {
   opacity: 0;
   -webkit-transform: translateX(20px);
           transform: translateX(20px);
 }
 
-.header.open .header__menu > span:last-child {
+.header.open .header__toggle > span:last-child {
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
 }
@@ -258,7 +263,8 @@ button:hover, .button:hover {
 }
 
 .header nav {
-  padding: 1.0625rem 1.5rem;
+  padding-top: 1.0625rem;
+  padding-bottom: 1.0625rem;
 }
 
 .header__logo img {
@@ -267,7 +273,7 @@ button:hover, .button:hover {
   margin-top: 9px;
 }
 
-.header__menu > span {
+.header__toggle > span {
   display: block;
   width: 26px;
   height: 2px;
@@ -278,8 +284,27 @@ button:hover, .button:hover {
   transition: all 150ms ease-in-out;
 }
 
-.header__menu > span:not(:last-child) {
+.header__toggle > span:not(:last-child) {
   margin-bottom: 5px;
+}
+
+.header__menu {
+  position: absolute;
+  width: 80%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  background: #fff;
+  padding: 1.625rem;
+  margin-top: 1.5rem;
+  border-radius: 5px;
+}
+
+.header__menu a {
+  display: block;
+  padding: 1rem;
+  color: #9698a6;
+  text-align: center;
 }
 
 .header__links a {

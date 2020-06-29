@@ -26,4 +26,16 @@
         }
 
     }
+
+    .header__links {
+        a {
+            font-size: $fontSml;
+        }
+
+    }
+
+    &__cta {
+        font-size: $fontSml;
+        color: $white;
+    }
 }

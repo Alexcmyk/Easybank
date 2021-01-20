@@ -63,7 +63,7 @@ a:hover {
 
 button,
 .button {
-  padding: 1rem 1.875rem;
+  padding: 0.875rem 2.1875rem;
   border-radius: 50px;
   cursor: pointer;
   background: -webkit-gradient(linear, right top, left top, from(#2bb7da), to(#31d35c));
@@ -73,8 +73,25 @@ button,
   font-weight: 400;
 }
 
+@media (max-width: 63.9375em) {
+  .hfm {
+    display: none;
+  }
+}
+
+@media (min-width: 64em) {
+  .hfd {
+    display: none;
+  }
+}
+
 .header nav {
-  padding: 24px;
+  padding: 1.0625rem 1.5rem;
+}
+
+.header__logo img {
+  max-width: 8.8125rem;
+  height: 1.375rem;
 }
 
 .header__menu > span {
@@ -91,10 +108,48 @@ button,
 .header__links a {
   font-size: 0.875rem;
   color: #9698a6;
+  -webkit-transition: color 300ms ease-in-out;
+  transition: color 300ms ease-in-out;
+  position: relative;
+  padding-bottom: 30px;
+}
+
+.header__links a:not(:last-child) {
+  margin-right: 32px;
+}
+
+.header__links a::after {
+  content: "";
+  opacity: 0;
+  position: absolute;
+  display: block;
+  height: 3px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: -webkit-gradient(linear, right top, left top, from(#2bb7da), to(#31d35c));
+  background: linear-gradient(to left, #2bb7da, #31d35c);
+  -webkit-transition: opacity 300ms ease-in-out;
+  transition: opacity 300ms ease-in-out;
+  pointer-events: none;
+}
+
+.header__links a:hover {
+  color: #2d314d;
+}
+
+.header__links a:hover::after {
+  opacity: 1;
 }
 
 .header__cta {
   color: white;
   font-size: 0.875rem;
+  -webkit-transition: opacity 300ms ease-in-out;
+  transition: opacity 300ms ease-in-out;
+}
+
+.header__cta:hover {
+  opacity: 0.75;
 }
 /*# sourceMappingURL=style.css.map */
